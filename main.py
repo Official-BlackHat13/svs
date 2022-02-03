@@ -23,10 +23,10 @@ logs_ch = '-1001276618447'          # Айди чата для логов       
 bot_username = 'Bomberukr_bot'       # Юзернейм бота без @
 TOKEN = '5206066773:AAGvih1U1VyXYMQWQlXrRT0Lk5CX4JXH-Uw' # Токен бота
 ######### Настройки платежей ########
-vip_price = 1                 # Цена за VIP
-qiwi_num = '79095495188'           # Номер киви в формате +79876543210 #Слито в телеграм канал @END_SOFTWARE
-qiwi_nick = 'FLOCC754'              # Ник киви для приёма оплаты
-qiwi_token = '2330f2e3163ec58d0c9f2dcc8de99dab' # Токен киви
+vip_price = 0              # Цена за VIP
+qiwi_num = '380684899261'           # Номер киви в формате +79876543210 #Слито в телеграм канал @END_SOFTWARE
+qiwi_nick = 'HIRONOTORI'              # Ник киви для приёма оплаты
+qiwi_token = 'f34419b039df8fb6fd23c678fc668362' # Токен киви
 ######### Прочие настройки ##########
 messages_in_minute = 30             # Кол-во сообщений в минуту для включения анти-спама
 #####################################
@@ -5153,9 +5153,11 @@ def handle_message_received(message):
                 tg_admin = types.InlineKeyboardButton(text="👨‍💻 Тех.поддержка", url="https://t.me/Hironotori")
                 reklama = types.InlineKeyboardButton(text="⚡️ Реклама в боте", url="https://t.me/Hironotori")
                 magazin = types.InlineKeyboardButton(text="🎁 Наш Магазин", url="https://t.me/magazin_Darke_bot")
+                news = types.InlineKeyboardButton(text="😍Наш канал", url="https://t.me/Bomberukr")
                 keyboard.add(reklama)
                 keyboard.add(tg_admin)
                 keyboard.add(magazin)
+                keyboard.add(news)
                 bot.send_message(chat_id, f'''<b>Статистика отображается в реальном времени!</b>
 
 🙋‍♂️ Пользователей‍: <code>{users_amount[0]}</code>
