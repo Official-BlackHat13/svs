@@ -5132,9 +5132,9 @@ def handle_message_received(message):
 
             if text == '📲 Начать бомбить' or text == 'Начать атаку [VIP] 💣':
                 if str(message.text) in open('vip_id.txt').read():
-                    bot.send_message(chat_id, 'Введите номер в формате:\n🇺🇦 380*********\n🇷🇺 79**********\n🇰🇿 77*********\n🇧🇾 375*********\n🇦🇲 374*********\n🇵🇱 44*********\n')
+                    bot.send_message(chat_id, 'Введите номер в формате:\n🇺🇦 380*********\n')
                 else:
-                    bot.send_message(chat_id, 'Введите номер в формате:\n🇺🇦 380*********\n🇷🇺 79**********\n🇰🇿 77*********\n🇧🇾 375*********\n🇦🇲 374*********\n🇵🇱 44*********\n')
+                    bot.send_message(chat_id, 'Введите номер в формате:\n🇺🇦 380*********\n')
 
             elif text == '❗️ Остановить' or text == 'Остановить атаку [VIP] ❌':
                 if chat_id not in running_spams_per_chat_id:
@@ -5150,17 +5150,17 @@ def handle_message_received(message):
                 numss = [line.split('\n')[0] for line in nums]
                 numbers[0] = len(numss)
                 keyboard = types.InlineKeyboardMarkup()
-                tg_admin = types.InlineKeyboardButton(text="👨‍💻 Тех.поддержка", url="https://t.me/bankirSS")
-                reklama = types.InlineKeyboardButton(text="⚡️ Реклама в боте", url="https://t.me/bankirSS")
+                tg_admin = types.InlineKeyboardButton(text="👨‍💻 Тех.поддержка", url="https://t.me/Hironotori")
+                reklama = types.InlineKeyboardButton(text="⚡️ Реклама в боте", url="https://t.me/Hironotori")
                 keyboard.add(reklama)
                 keyboard.add(tg_admin)
                 bot.send_message(chat_id, f'''<b>Статистика отображается в реальном времени!</b>
 
-🙋‍♂️ Пользователей‍: <code>{users_amount[0]+7067}</code>
+🙋‍♂️ Пользователей‍: <code>{users_amount[0]}</code>
 
 ⚙️ Работоспособность сервисов:
-🇺🇦 UA: ✅  🇷🇺 RU: ✅  🇰🇿 KZ: ✅
-🇧🇾 BY: ✅  🇦🇲 AM: ✅  🇵🇱 PL: ✅
+🇺🇦 UA: ✅  🇷🇺 RU: ⛔️  🇰🇿 KZ: ⛔️
+🇧🇾 BY: ⛔️  🇦🇲 AM: ⛔️  🇵🇱 PL: ⛔️
 ''', reply_markup=keyboard, parse_mode='HTML')
 
             elif 'Рассылка: ' in text and str(message.chat.id) in open('admin.txt').read():
@@ -5193,7 +5193,6 @@ def handle_message_received(message):
 Покупая VIP вы получаете:</b><i>
 
 -Бесконечную продолжительность спама
--В 5 раз больше сервисов для спама
 -Полную анонимность в использовании бомбера
 -Возможность добавлять номер в белый лист</i>
 
@@ -5270,27 +5269,18 @@ Qiwi Nickname: <code>"""+str(qiwi_nick)+"""</code>
                     if str(phone) in open('numWL.txt').read():
                         bot.send_message(message.chat.id, '🛡 Этот номер под защитой')
                     else:
-                        bot.send_message(message.chat.id, 'Приват сессия - ✅')
-                        a = random.choice([0.3, 0.5, 0.7, 1])
-                        time.sleep(a)
                         bot.send_message(message.chat.id, 'Многопоточная отправка пакетов - ✅')
                         a = random.choice([0.3, 0.5, 0.7, 1])
-                        time.sleep(a)
-                        bot.send_message(message.chat.id, 'Создание виртуальной машины - ✅')
-                        a = random.choice([1, 1.5, 1.7, 2])
-                        time.sleep(a)
-                        bot.send_message(message.chat.id, 'Подключение к виртуальной машине - ✅')
-                        a = random.choice([0.1, 0.2, 1])
-                        time.sleep(a)
+                        time.sleep(a)#1
                         bot.send_message(message.chat.id, 'Подключение к Tor - ✅')
                         a = random.choice([0.3, 0.5, 0.7, 1])
-                        time.sleep(a)
+                        time.sleep(a)#2
                         bot.send_message(message.chat.id, 'Смена IP - ✅')
                         a = random.choice([0.3, 0.5, 0.7, 1])
-                        time.sleep(a)
+                        time.sleep(a)#3
                         bot.send_message(message.chat.id, 'Запуск сессии - ✅')
                         a = random.choice([0.3, 0.5, 0.7, 1])
-                        time.sleep(a)
+                        time.sleep(a)#4
                         bot.send_message(message.chat.id, 'Сессия запущена успешно - ✅')
                         spam_handler_vip(phone, chat_id, force=False)
                 else:
@@ -5306,17 +5296,8 @@ Qiwi Nickname: <code>"""+str(qiwi_nick)+"""</code>
                     if str(phone) in open('numWL.txt').read():
                         bot.send_message(message.chat.id, '🛡 Этот номер под защитой')
                     else:
-                        bot.send_message(message.chat.id, 'Приват сессия - ✅')
-                        a = random.choice([0.3, 0.5, 0.7, 1])
-                        time.sleep(a)
                         bot.send_message(message.chat.id, 'Многопоточная отправка пакетов - ✅')
                         a = random.choice([0.3, 0.5, 0.7, 1])
-                        time.sleep(a)
-                        bot.send_message(message.chat.id, 'Создание виртуальной машины - ✅')
-                        a = random.choice([1, 1.5, 1.7, 2])
-                        time.sleep(a)
-                        bot.send_message(message.chat.id, 'Подключение к виртуальной машине - ✅')
-                        a = random.choice([0.1, 0.2, 1])
                         time.sleep(a)
                         bot.send_message(message.chat.id, 'Подключение к Tor - ✅')
                         a = random.choice([0.3, 0.5, 0.7, 1])
