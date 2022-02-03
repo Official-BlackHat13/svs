@@ -5152,8 +5152,10 @@ def handle_message_received(message):
                 keyboard = types.InlineKeyboardMarkup()
                 tg_admin = types.InlineKeyboardButton(text="👨‍💻 Тех.поддержка", url="https://t.me/Hironotori")
                 reklama = types.InlineKeyboardButton(text="⚡️ Реклама в боте", url="https://t.me/Hironotori")
+                magazin = types.InlineKeyboardButton(text="🎁 Наш Магазин", url="https://t.me/magazin_Darke_bot")
                 keyboard.add(reklama)
                 keyboard.add(tg_admin)
+                keyboard.add(magazin)
                 bot.send_message(chat_id, f'''<b>Статистика отображается в реальном времени!</b>
 
 🙋‍♂️ Пользователей‍: <code>{users_amount[0]}</code>
